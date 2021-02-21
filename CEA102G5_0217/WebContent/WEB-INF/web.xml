@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="false" version="3.0">
+  <display-name>IBM_emp_0201MVC_Single-Table_mySQL8</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/myproject</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <servlet-name>ComServlet</servlet-name>
+    <servlet-class>com.commodity.controller.ComServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ComServlet</servlet-name>
+    <url-pattern>/commodity/com.do</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>ComcServlet</servlet-name>
+    <servlet-class>com.commodity_category.controller.ComcServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ComcServlet</servlet-name>
+    <url-pattern>/commodity_category/comc.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ComPicReader</servlet-name>
+    <servlet-class>com.commodity.controller.ComPicReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ComPicReader</servlet-name>
+    <url-pattern>/commodity/comPic.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>com.cart.controller.CartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/cart/comCart.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>OmServlet</servlet-name>
+    <servlet-class>com.ordermaster.controller.OmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OmServlet</servlet-name>
+    <url-pattern>/ordermaster/om.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>MemServlet</servlet-name>
+    <servlet-class>com.member.controller.MemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemServlet</servlet-name>
+    <url-pattern>/member/mem.do</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <servlet-name>MemrServlet</servlet-name>
+    <servlet-class>com.member_recipient.controller.MemrServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemrServlet</servlet-name>
+    <url-pattern>/member_recipient/memr.do</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
